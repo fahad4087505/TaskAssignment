@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardElevation="@dimen/_3sdp"
+    android:layout_margin="@dimen/_3sdp"
+    app:cardBackgroundColor="#DCDCDC"
+    app:contentPaddingBottom="@dimen/_3sdp"
+    app:contentPadding="@dimen/_2sdp"
+    app:cardCornerRadius="@dimen/_3sdp">
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/cell_layout"
+    android:layout_marginBottom="@dimen/_2sdp"
+
+    android:foreground="?attr/selectableItemBackgroundBorderless"
+    android:background="#DCDCDC"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_margin="@dimen/_5sdp"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_90sdp"
+        android:background="@drawable/maxresdefault"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/_9sdp"
+        android:layout_marginTop="@dimen/_1sdp"
+        android:gravity="left"
+        android:textSize="@dimen/_10ssp"
+        android:id="@+id/category_name"
+        android:text="Truth is a beautiful"
+        android:layout_marginStart="@dimen/_9sdp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="@dimen/_9sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_9ssp"
+        android:gravity="left"
+        android:id="@+id/category_description"
+        android:text="London Grammar"
+        android:layout_marginStart="@dimen/_9sdp" />
+</LinearLayout></androidx.cardview.widget.CardView>
