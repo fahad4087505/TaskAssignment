@@ -4,7 +4,7 @@
     <data>
         <variable
             name="RegisterViewModel"
-            type="net.gahfy.mvvmposts.viewmodel.RegisterViewModel" />
+            type="net.app.serviceprovider.viewmodel.RegisterViewModel" />
     </data>
 
     <androidx.core.widget.NestedScrollView
@@ -13,105 +13,87 @@
         android:isScrollContainer="true">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:orientation="vertical"
             tools:context=".View.MainActivity">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:text="Register"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_16ssp" />
+            <View
+                android:id="@+id/divider_view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/header_layout"
+                android:background="@color/gray_black" />
 
             <EditText
                 android:id="@+id/txtName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="32dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
                 android:ems="10"
                 android:hint="Name"
                 android:inputType="textEmailAddress"
-                android:text="@={RegisterViewModel.Name}"/>
+                android:text="@={RegisterViewModel.Name}" />
+
             <EditText
                 android:id="@+id/numPhone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="32dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
                 android:ems="10"
                 android:hint="Phone"
                 android:inputType="phone"
-                android:text="@={RegisterViewModel.Phone}"/>
+                android:text="@={RegisterViewModel.Phone}" />
+
             <EditText
                 android:id="@+id/txtEmailAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="32dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
                 android:ems="10"
                 android:hint="E-Mail Address"
                 android:inputType="textEmailAddress"
-                android:text="@={RegisterViewModel.EmailAddress}"/>
+                android:text="@={RegisterViewModel.EmailAddress}" />
 
             <EditText
                 android:id="@+id/txtPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="32dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
                 android:ems="10"
                 android:hint="Password"
                 android:inputType="textPassword"
-                android:text="@={RegisterViewModel.Password}"/>
-
+                android:text="@={RegisterViewModel.Password}" />
             <Button
                 android:id="@+id/btnLogin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="32dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="32dp"
-                android:text="Click to Signup"
-                android:onClick="@{(v) -> RegisterViewModel.onClick(v)}"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/lblTagline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="60dp"
-                android:text="See the Results Below From LiveDataBinding"
-                android:textColor="@android:color/background_dark"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/button_shape"
                 android:gravity="center"
-                android:textSize="16sp"/>
-
-            <TextView
-                android:id="@+id/lblEmailAnswer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="---"
-                android:textColor="@android:color/holo_blue_light"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/lblPasswordAnswer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="32dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="---"
-                android:textColor="@android:color/holo_blue_light"
-                android:textSize="20sp" />
-
+                android:onClick="@{(v) -> RegisterViewModel.onClick(v)}"
+                android:padding="@dimen/_5sdp"
+                android:text="Register"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp" />
         </LinearLayout>
-
     </androidx.core.widget.NestedScrollView>
 </layout>

@@ -1,11 +1,11 @@
-package net.gahfy.serviceprovider.injection.component
+package net.app.serviceprovider.injection.component
 
 import dagger.Component
-import net.gahfy.serviceprovider.injection.module.NetworkModule
-import net.gahfy.serviceprovider.viewmodel.PostListViewModel
-import net.gahfy.serviceprovider.viewmodel.PostViewModel
-import net.gahfy.serviceprovider.viewmodel.LoginViewModel
-import net.gahfy.serviceprovider.viewmodel.RegisterViewModel
+import net.app.serviceprovider.injection.module.NetworkModule
+import net.app.serviceprovider.viewmodel.PostListViewModel
+import net.app.serviceprovider.viewmodel.PostViewModel
+import net.app.serviceprovider.viewmodel.RegisterViewModel
+import net.app.serviceprovider.viewmodel.LoginViewModel
 import javax.inject.Singleton
 
 /**

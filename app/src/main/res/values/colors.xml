@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#000000</color>
     <color name="black">#000000</color>
     <color name="red">#ff0000</color>
     <color name="card_background_color">#00000000</color>
@@ -11,4 +11,5 @@
     <color name="purple">#666699</color>
     <color name="blue">#519afa</color>
     <color name="hint_text_color">#565656</color>
+    <color name="gray_black">#777777</color>
 </resources>

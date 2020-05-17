@@ -4,29 +4,69 @@
     <data>
         <variable
             name="viewModel"
-            type="net.gahfy.mvvmposts.ui.post.PostListViewModel" />
+            type="net.app.serviceprovider.viewmodel.PostListViewModel" />
     </data>
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_5sdp"
+        android:orientation="vertical">
 
-        <ProgressBar
-            android:layout_width="wrap_content"
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:mutableVisibility="@{viewModel.getLoadingVisibility()}"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
+            android:layout_marginTop="@dimen/_8sdp"
+            android:gravity="left"
+            android:padding="@dimen/_3sdp"
+            android:text="Categories"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15ssp" />
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/post_list"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:adapter="@{viewModel.getPostListAdapter()}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:gravity="left"
+            android:padding="@dimen/_3sdp"
+            android:text="Latest"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15ssp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/latest_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:gravity="left"
+            android:padding="@dimen/_3sdp"
+            android:text="Popular"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15ssp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/popular_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </LinearLayout>
+    </ScrollView>
 </layout>

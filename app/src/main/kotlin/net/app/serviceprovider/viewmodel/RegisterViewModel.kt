@@ -1,4 +1,4 @@
-package net.gahfy.serviceprovider.viewmodel
+package net.app.serviceprovider.viewmodel
 
 import android.app.Application
 import android.content.Intent
@@ -7,9 +7,9 @@ import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import net.gahfy.serviceprovider.base.BaseViewModel
-import net.gahfy.serviceprovider.model.RegisterUser
-import net.gahfy.serviceprovider.ui.post.MainActivity
+import net.app.serviceprovider.base.BaseViewModel
+import net.app.serviceprovider.model.RegisterUser
+import net.app.serviceprovider.ui.activities.MainActivity
 import java.util.*
 
 class RegisterViewModel(application: Application )  : BaseViewModel(application) {
@@ -36,12 +36,11 @@ class RegisterViewModel(application: Application )  : BaseViewModel(application)
         userMutableLiveData!!.setValue(registerUser)
     }
     fun registerUser(fullName:String,email:String,password:String,phone:String){
-        // register the user in firbase
         fAuth!!.createUserWithEmailAndPassword(email, password).addOnCompleteListener { task ->
             if (task.isSuccessful) {
-                // send verification link
                 val fuser = fAuth!!.currentUser
-                fuser!!.sendEmailVerification().addOnSuccessListener { Toast.makeText(context, "Verification Email Has been Sent.", Toast.LENGTH_SHORT).show() }.addOnFailureListener {
+                fuser!!.sendEmailVerification().addOnSuccessListener {
+                    Toast.makeText(context, "Verification Email Has been Sent.", Toast.LENGTH_SHORT).show() }.addOnFailureListener {
                      }
                 Toast.makeText(context, "User Created.", Toast.LENGTH_SHORT).show()
                 userID = fAuth!!.currentUser!!.uid

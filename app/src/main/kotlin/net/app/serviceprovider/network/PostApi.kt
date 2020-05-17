@@ -1,7 +1,6 @@
-package net.gahfy.serviceprovider.network
+package net.app.serviceprovider.network
 
 import io.reactivex.Observable
-import net.gahfy.serviceprovider.model.Post
 import retrofit2.http.GET
 
 /**
@@ -11,6 +10,6 @@ interface PostApi {
     /**
      * Get the list of the pots from the API
      */
-    @GET("/posts")
-    fun getPosts(): Observable<List<Post>>
+//    @GET("/posts")
+//    fun getPosts(): Observable<List<Post>>
 }

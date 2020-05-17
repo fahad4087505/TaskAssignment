@@ -1,11 +1,11 @@
-package net.gahfy.serviceprovider.injection.module
+package net.app.serviceprovider.injection.module
 
 import dagger.Module
 import dagger.Provides
 import dagger.Reusable
 import io.reactivex.schedulers.Schedulers
-import net.gahfy.serviceprovider.network.PostApi
-import net.gahfy.serviceprovider.utils.BASE_URL
+import net.app.serviceprovider.network.PostApi
+import net.app.serviceprovider.utils.BASE_URL
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory

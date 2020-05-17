@@ -6,13 +6,12 @@ apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 29
-
     dataBinding {
         enabled = true
     }
 
     defaultConfig {
-        applicationId "net.gahfy.mvvmposts"
+        applicationId "net.app.serviceprovider"
         minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
@@ -64,10 +63,6 @@ dependencies {
     // LiveData & ViewModel
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
 
-    // Room
-    implementation 'androidx.room:room-runtime:2.2.5'
-    kapt 'androidx.room:room-compiler:2.2.5'
-
     // Retrofit
     implementation "com.squareup.retrofit2:retrofit:2.4.0"
     implementation "com.squareup.retrofit2:adapter-rxjava2:2.4.0"
@@ -75,12 +70,8 @@ dependencies {
 
     // Dagger 2
     implementation 'com.google.dagger:dagger-android:2.15'
-//    implementation 'com.google.dagger:dagger-android-support:2.x'
     kapt 'com.google.dagger:dagger-android-processor:2.16'
     kapt 'com.google.dagger:dagger-compiler:2.16'
-//    implementation "com.google.dagger:dagger:2.16"
-//    kapt "com.google.dagger:dagger-compiler::2.x"
-//    compileOnly "org.glassfish:javax.annotation:3.1.1"
 
     //Rx
     implementation "io.reactivex.rxjava2:rxjava:2.2.0"
@@ -94,4 +85,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:19.3.1'
     implementation 'com.google.firebase:firebase-firestore:21.4.3'
     implementation 'com.google.firebase:firebase-storage:19.1.1'
+    implementation 'com.google.firebase:firebase-database:19.3.0'
+
+    //CardView
+    implementation 'androidx.cardview:cardview:1.0.0'
 }

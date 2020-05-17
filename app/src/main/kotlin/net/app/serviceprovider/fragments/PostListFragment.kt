@@ -1,4 +1,4 @@
-package net.gahfy.serviceprovider.fragments
+package net.app.serviceprovider.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,12 +10,12 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
-import net.gahfy.serviceprovider.R
-import net.gahfy.serviceprovider.adapters.PostsAdapter
-import net.gahfy.serviceprovider.base.BaseFragment
-import net.gahfy.serviceprovider.databinding.FragmentPostListBinding
-import net.gahfy.serviceprovider.model.Movie
-import net.gahfy.serviceprovider.viewmodel.PostListViewModel
+import net.app.serviceprovider.R
+import net.app.serviceprovider.adapters.PostsAdapter
+import net.app.serviceprovider.base.BaseFragment
+import net.app.serviceprovider.databinding.FragmentPostListBinding
+import net.app.serviceprovider.model.Movie
+import net.app.serviceprovider.viewmodel.PostListViewModel
 
 
 class PostListFragment: BaseFragment() {
@@ -34,7 +34,6 @@ class PostListFragment: BaseFragment() {
            override fun onChanged(@Nullable items: List<Movie?>?) {
                setAdapter(items as List<Movie>)
                progressBar.dialog.dismiss()
-//               binding.progressCircular.visibility=View.GONE
            }
         })
 

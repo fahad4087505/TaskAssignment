@@ -1,4 +1,4 @@
-package net.gahfy.serviceprovider.utils
+package net.app.serviceprovider.utils
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import android.widget.TextView
-import net.gahfy.serviceprovider.utils.extension.getParentActivity
+import net.app.serviceprovider.utils.extension.getParentActivity
 
 @BindingAdapter("adapter")
 fun setAdapter(view: RecyclerView, adapter: RecyclerView.Adapter<*>) {

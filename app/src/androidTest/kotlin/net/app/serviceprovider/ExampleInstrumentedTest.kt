@@ -1,5 +1,6 @@
-package net.gahfy.serviceprovider
+package net.app.serviceprovider
 
+import androidx.test.InstrumentationRegistry.getTargetContext
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
 
@@ -19,6 +20,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getTargetContext()
-        assertEquals("net.gahfy.serviceprovider", appContext.packageName)
+        assertEquals("net.app.serviceprovider", appContext.packageName)
     }
 }

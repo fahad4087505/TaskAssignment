@@ -1,4 +1,4 @@
-package net.gahfy.serviceprovider.utils.extension
+package net.app.serviceprovider.utils.extension
 
 import android.content.ContextWrapper
 import androidx.appcompat.app.AppCompatActivity

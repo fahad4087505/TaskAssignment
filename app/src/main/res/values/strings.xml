@@ -1,6 +1,10 @@
 <resources>
-    <string name="app_name">MVVMPosts</string>
+    <string name="app_name">ServiceProvider</string>
 
     <string name="retry">Retry</string>
     <string name="post_error">An error occurred while loading the posts</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="cancel_button_title">Cancel</string>
+    <string name="ok_button_title">OK</string>
 </resources>

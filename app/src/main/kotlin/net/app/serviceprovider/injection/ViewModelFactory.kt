@@ -1,4 +1,4 @@
-package net.gahfy.serviceprovider.injection
+package net.app.serviceprovider.injection
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

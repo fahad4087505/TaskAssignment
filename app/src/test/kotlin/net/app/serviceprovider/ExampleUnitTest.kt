@@ -1,4 +1,4 @@
-package net.gahfy.serviceprovider
+package net.app.serviceprovider
 
 import org.junit.Test
 

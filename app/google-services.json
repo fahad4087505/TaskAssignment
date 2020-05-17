@@ -45,20 +45,12 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:75675175217:android:9bba23ee1f0145ae39c810",
+        "mobilesdk_app_id": "1:75675175217:android:8f90ebcfd39f2b7f39c810",
         "android_client_info": {
-          "package_name": "net.gahfy.mvvmposts"
+          "package_name": "net.app.serviceprovider"
         }
       },
       "oauth_client": [
-        {
-          "client_id": "75675175217-pdd0jukhl2logotd1vr701m9r4r68fnb.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "net.gahfy.mvvmposts",
-            "certificate_hash": "b8e8d0a6eac7b6622f23114eadd2ba2c7dde1a0b"
-          }
-        },
         {
           "client_id": "75675175217-0uombvm6uddcate5djt5vlkcv5uo4d06.apps.googleusercontent.com",
           "client_type": 3

@@ -1,4 +1,4 @@
-package net.gahfy.serviceprovider.model;
+package net.app.serviceprovider.model;
 
 import android.util.Patterns;
 

@@ -1,20 +1,18 @@
-package net.gahfy.serviceprovider.viewmodel
+package net.app.serviceprovider.viewmodel
 
 import android.app.Application
 import android.content.ContentValues.TAG
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import com.google.firebase.database.*
-import net.gahfy.serviceprovider.base.BaseViewModel
-import net.gahfy.serviceprovider.model.Movie
-import net.gahfy.serviceprovider.network.PostApi
-import net.gahfy.serviceprovider.adapters.PostListAdapter
+import net.app.serviceprovider.base.BaseViewModel
+import net.app.serviceprovider.model.Movie
+import net.app.serviceprovider.network.PostApi
 import javax.inject.Inject
 
-class PostListViewModel(application: Application):BaseViewModel(application ){
+class PostListViewModel(application: Application): BaseViewModel(application ){
     @Inject
     lateinit var postApi: PostApi
-    val postListAdapter: PostListAdapter = PostListAdapter()
     var items: MutableList<Movie> = mutableListOf()
     private var movieList: MutableLiveData<List<Movie>>? = null
     var database: FirebaseDatabase = FirebaseDatabase.getInstance()

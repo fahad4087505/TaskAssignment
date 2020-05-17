@@ -1,4 +1,4 @@
-package net.gahfy.serviceprovider.viewmodel
+package net.app.serviceprovider.viewmodel
 
 import android.app.Application
 import android.content.Intent
@@ -6,16 +6,13 @@ import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import com.google.firebase.auth.FirebaseAuth
-import net.gahfy.serviceprovider.base.BaseViewModel
-import net.gahfy.serviceprovider.model.LoginUser
-import net.gahfy.serviceprovider.ui.post.MainActivity
-import net.gahfy.serviceprovider.ui.post.RegisterActivity
+import net.app.serviceprovider.base.BaseViewModel
+import net.app.serviceprovider.model.LoginUser
+import net.app.serviceprovider.ui.activities.MainActivity
+import net.app.serviceprovider.ui.activities.RegisterActivity
 
 class LoginViewModel(application: Application) : BaseViewModel(application) {
-
     var fAuth: FirebaseAuth = FirebaseAuth.getInstance()
-
-
     private val context = getApplication<Application>().applicationContext
     var EmailAddress = MutableLiveData<String>()
     var Password = MutableLiveData<String>()
@@ -34,7 +31,7 @@ class LoginViewModel(application: Application) : BaseViewModel(application) {
         userMutableLiveData!!.setValue(loginUser)
     }
     fun navigate(view: View?) {
-        context.startActivity(Intent(context,RegisterActivity::class.java))
+        context.startActivity(Intent(context, RegisterActivity::class.java))
     }
     fun singinUser(email:String, password:String) {
         fAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener { task ->

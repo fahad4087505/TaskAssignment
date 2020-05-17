@@ -1,4 +1,4 @@
-package net.app.serviceprovider.ui.post
+package net.app.serviceprovider.ui.activities
 
 
 import android.os.Bundle
@@ -26,9 +26,9 @@ class RegisterActivity : AppCompatActivity() {
         fAuth = FirebaseAuth.getInstance()
         registerViewModel!!.user!!.observe(this, Observer { registerUser ->
             if (TextUtils.isEmpty(Objects.requireNonNull(registerUser).strEmailAddress)) {
-                binding!!.txtEmailAddress.error = "Enter an E-Mail Address"
-                binding!!.txtEmailAddress.requestFocus()
-            } else if (TextUtils.isEmpty(Objects.requireNonNull(registerUser).strEmailAddress)) {
+                binding!!.txtName.error = "Enter Name"
+                binding!!.txtName.requestFocus()
+            }else if (TextUtils.isEmpty(Objects.requireNonNull(registerUser).strEmailAddress)) {
                 binding!!.txtEmailAddress.error = "Enter an E-Mail Address"
                 binding!!.txtEmailAddress.requestFocus()
             } else if (!registerUser!!.isEmailValid) {
